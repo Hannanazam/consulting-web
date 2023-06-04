@@ -5498,7 +5498,9 @@ blockquote cite::before {
   border-radius: 30px;
   transition: all .3s ease;
 }
-
+.search-btn-wrap{
+  display: none;
+}
 .logo img{
   height: 100px;
 }
