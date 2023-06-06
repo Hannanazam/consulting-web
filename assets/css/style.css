@@ -5502,7 +5502,8 @@ blockquote cite::before {
   display: none;
 }
 .logo img{
-  height: 100px;
+  height: 60px;
+  filter: brightness(6);
 }
 .text-justify{
   text-align: justify;
@@ -5926,7 +5927,8 @@ h1.h1_heading_project {
     width: 100%;
   }
   .logo img{
-    height: 60px;
+    height: 50px;
+    padding: 3px;
   }
 }
 
