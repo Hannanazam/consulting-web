@@ -5466,7 +5466,8 @@ blockquote cite::before {
   font-size: 50px;
   margin-bottom: 20px;
   color: #fff;
-  background-color: #FF572C;
+  /* background-color: #FF572C; */
+  background: #a67c52;
   border-radius: 50%;
   height: 100px;
   width: 100px;
