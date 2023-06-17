@@ -3,6 +3,7 @@
 
 
 <!-- Mirrored from weblearnbd.net/tphtml/arvilax/arvilax/contact.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 03 Jun 2023 21:03:32 GMT -->
+
 <head>
    <meta charset="utf-8">
    <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -27,9 +28,68 @@
    <link rel="stylesheet" href="assets/css/pe-icon-7-stroke.css">
    <link rel="stylesheet" href="assets/css/spacing.css">
    <link rel="stylesheet" href="assets/css/style.css">
+   <?php require_once('contact.php'); ?>
 </head>
 
 <body>
+
+   <script>
+      function alertWarning(){
+        $(document).ready(function(){
+            // $('.alert-warning').addClass("show");
+            // $('.alert-warning').removeClass("hide");
+            $('.alert-warning').addClass("showAlert");
+            // setTimeout(function(){
+            //   $('.alert-warning').removeClass("show");
+            //   $('.alert-warning').addClass("hide");
+            // },5000);
+        });
+        }
+      function alertSuccess(){
+        $(document).ready(function(){
+            // $('.alert-success').removeClass("hide");
+            $('.alert-success').addClass("showAlert");
+              //  $('.alert-success').addClass("show");
+            // setTimeout(function(){
+            //   $('.alert-success').removeClass("show");
+            //   $('.alert-success').addClass("hide");
+            // },5000);
+        });
+    
+        }
+    </script>
+  
+  
+  
+  
+ 
+<?php
+if (isset($_POST["send"])) {
+   $name = $_POST['name'];
+   $email = $_POST['email'];
+   $phone = $_POST['phone'];
+   $subject = $_POST['subject'];
+   $message = $_POST['message'];
+
+
+   $from = "hannanazam200@gmail.com";
+
+   $message = $name . '' . $phone . ' ' . $subject . ' ' . $email . '' . $message;
+
+   $to = "hannanazam200@gmail.com";
+   $headers = "From:" . $from;
+
+   if ($name != "" && $subject != "" && $email != "" && $message != "" && $phone != "") {
+      if (mail($to, $subject, $message, $headers)) {
+
+         echo '<script type="text/javascript">alertSuccess() </script>';
+      } else {
+         echo '<script type="text/javascript">alertWarning() </script>';
+      }
+   }
+}
+?>
+
    <!--[if lte IE 9]>
       <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
       <![endif]-->
@@ -57,47 +117,50 @@
    <!-- back to top end -->
    <div class="mouseCursor cursor-outer"></div>
    <div class="mouseCursor cursor-inner"><span>Drag</span></div>
-    <!-- header area start -->
-    <header>
-        <div id="header-sticky" class="header__area header__transparent pr-90 pl-90 header-sticky-active">
-           <div class="header__main" id="header-sticky">
-              <div class="container-fluid">
-                 <div class="row align-items-center">
-                    <div class="col-lg-2 col-md-4 col-7">
-  
-                       <div class="logo">
-                          <a href="index.html">
-                             <img src="assets/img/logo/logo.png" alt="logo">
-                          </a>
-                       </div>
-                    </div>
-                    <div class=" col-lg-8 col-md-4 d-none d-md-block">
-                        <div class="main-menu text-center">
-                           <nav id="mobile-menu">
-                              <ul>
-                                 <li>
-                                    <a href="index.html">Home</a>
-                                 </li>
-                                 <li>
-                                    <a href="about.html">About us</a>
-                                 </li>
-                                 <li>
-                                    <a href="client.html">Our Clients</a>
-                                 </li>
-                                 <li>
-                                    <a href="associates.html">Our Associates</a>
-                                 </li>
-                                 <li>
-                                    <a href="project.html">Project</a>
-                                 </li>
-                                 <li>
-                                    <a href="gallery.html">Gallery</a>
-                                 </li>
-                                 <li>
-                                    <a href="contact.html">Contact us</a>
-                                 </li>
-   
-                                 <!-- <li class="has-dropdown">
+   <!-- header area start -->
+   <header>
+      <div id="header-sticky" class="header__area header__transparent pr-90 pl-90 header-sticky-active">
+         <div class="header__main" id="header-sticky">
+            <div class="container-fluid">
+               <div class="row align-items-center">
+                  <div class="col-lg-2 col-md-4 col-7">
+
+                     <div class="logo">
+                        <a href="index.html">
+                           <img src="assets/img/logo/logo.png" alt="logo">
+                        </a>
+                     </div>
+                  </div>
+                  <div class=" col-lg-8 col-md-4 d-none d-md-block">
+                     <div class="main-menu text-center">
+                        <nav id="mobile-menu">
+                           <ul>
+                              <li>
+                                 <a href="index.html">Home</a>
+                              </li>
+                              <li>
+                                 <a href="about.html">About us</a>
+                              </li>
+                              <li>
+                                 <a href="client.html">Our Clients</a>
+                              </li>
+                              <li>
+                                 <a href="associates.html">Our Associates</a>
+                              </li>
+                              <li>
+                                 <a href="project.html">Project</a>
+                              </li>
+                              <li>
+                                 <a href="gallery.html">Gallery</a>
+                              </li>
+                              <li>
+                                 <a href="team.html">Our Team</a>
+                              </li>
+                              <li>
+                                 <a href="contact.html">Contact us</a>
+                              </li>
+
+                              <!-- <li class="has-dropdown">
                                       <a href="#">Pages</a>
                                       <ul class="submenu">
                                          <li><a href="team.html">Team</a></li>
@@ -125,42 +188,43 @@
      
                                       </ul>
                                    </li> -->
-                              </ul>
-                           </nav>
+                           </ul>
+                        </nav>
+                     </div>
+                  </div>
+                  <div class="col-lg-2 col-md-4 col-5">
+                     <div class="header__main_right d-flex justify-content-end align-items-center">
+                        <div class="tp-header-search-icons normal-search mr-80 p-relative">
+                           <div class="search-btn-wrap">
+                              <button class="button-search-toggle position-relative">
+                                 <i class="header_search-button text-white far fa-search"></i>
+                                 <i class="header_search-close text-white far fa-times"></i>
+                              </button>
+                              <div class="tp-search-form p-relative">
+                                 <form action="#">
+                                    <input type="text" placeholder="Search ...">
+                                    <button type="submit" class="search-submit-icon"><i
+                                          class="far fa-search"></i></button>
+                                 </form>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="tp-bar-icon">
+                           <a href="javascript:void(0)" class="offcanvas-toggle-btn"><i class="fal fa-bars"></i></a>
                         </div>
                      </div>
-                    <div class="col-lg-2 col-md-4 col-5">
-                       <div class="header__main_right d-flex justify-content-end align-items-center">
-                          <div class="tp-header-search-icons normal-search mr-80 p-relative">
-                             <div class="search-btn-wrap">
-                               <button class="button-search-toggle position-relative">
-                                   <i class="header_search-button text-white far fa-search"></i>
-                                   <i class="header_search-close text-white far fa-times"></i>
-                               </button>
-                               <div class="tp-search-form p-relative">
-                                   <form action="#">
-                                      <input type="text" placeholder="Search ...">
-                                      <button type="submit" class="search-submit-icon"><i class="far fa-search"></i></button>
-                                 </form>
-                               </div>
-                             </div>
-                          </div>
-                          <div class="tp-bar-icon">
-                             <a href="javascript:void(0)" class="offcanvas-toggle-btn"><i class="fal fa-bars"></i></a>
-                          </div>
-                       </div>
-                    </div>
-                 </div>
-              </div>
-           </div>
-        </div>
-     </header>
-  
-    <!-- header area end -->
-    
-    
-    <!-- offcanvas area -->
-    <div class="offcanvas__area off-canvas-bg" data-background="assets/img/bg/Sidearea-bg-img.png">
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </header>
+
+   <!-- header area end -->
+
+
+   <!-- offcanvas area -->
+   <div class="offcanvas__area off-canvas-bg" data-background="assets/img/bg/Sidearea-bg-img.png">
       <div class="offcanvas_area-logo">
          <span class="offcanvas__close-btn"><a href="javascript:void(0)"><i class="fal fa-times"></i></a></span>
       </div>
@@ -172,16 +236,21 @@
             <img src="assets/img/logo/logo.png" alt="">
          </div>
          <div class="offcanva-details">
-            <p>Our Firm was set up in 2014 with the point of giving specific consultancy and administrative administrations in the field of Civil Engineering.</p>
+            <p>Our Firm was set up in 2014 with the point of giving specific consultancy and administrative
+               administrations in the field of Civil Engineering.</p>
          </div>
          <div class="offcanva-btn">
             <a href="contact.html" class="tp-slider-btn   mt-40 d-inline-block" tabindex="-1">
                <span>
                   <svg width="53" height="8" viewBox="0 0 53 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                     <path d="M52.3536 4.35356C52.5488 4.15829 52.5488 3.84171 52.3536 3.64645L49.1716 0.464469C48.9763 0.269207 48.6597 0.269207 48.4645 0.464469C48.2692 0.659731 48.2692 0.976314 48.4645 1.17158L51.2929 4L48.4645 6.82843C48.2692 7.02369 48.2692 7.34027 48.4645 7.53554C48.6597 7.7308 48.9763 7.7308 49.1716 7.53554L52.3536 4.35356ZM-3.11023e-08 4.5L52 4.5L52 3.5L3.11023e-08 3.5L-3.11023e-08 4.5Z" fill="currentColor"></path>
+                     <path
+                        d="M52.3536 4.35356C52.5488 4.15829 52.5488 3.84171 52.3536 3.64645L49.1716 0.464469C48.9763 0.269207 48.6597 0.269207 48.4645 0.464469C48.2692 0.659731 48.2692 0.976314 48.4645 1.17158L51.2929 4L48.4645 6.82843C48.2692 7.02369 48.2692 7.34027 48.4645 7.53554C48.6597 7.7308 48.9763 7.7308 49.1716 7.53554L52.3536 4.35356ZM-3.11023e-08 4.5L52 4.5L52 3.5L3.11023e-08 3.5L-3.11023e-08 4.5Z"
+                        fill="currentColor"></path>
                   </svg>
                   <svg width="53" height="8" viewBox="0 0 53 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                     <path d="M52.3536 4.35356C52.5488 4.15829 52.5488 3.84171 52.3536 3.64645L49.1716 0.464469C48.9763 0.269207 48.6597 0.269207 48.4645 0.464469C48.2692 0.659731 48.2692 0.976314 48.4645 1.17158L51.2929 4L48.4645 6.82843C48.2692 7.02369 48.2692 7.34027 48.4645 7.53554C48.6597 7.7308 48.9763 7.7308 49.1716 7.53554L52.3536 4.35356ZM-3.11023e-08 4.5L52 4.5L52 3.5L3.11023e-08 3.5L-3.11023e-08 4.5Z" fill="currentColor"></path>
+                     <path
+                        d="M52.3536 4.35356C52.5488 4.15829 52.5488 3.84171 52.3536 3.64645L49.1716 0.464469C48.9763 0.269207 48.6597 0.269207 48.4645 0.464469C48.2692 0.659731 48.2692 0.976314 48.4645 1.17158L51.2929 4L48.4645 6.82843C48.2692 7.02369 48.2692 7.34027 48.4645 7.53554C48.6597 7.7308 48.9763 7.7308 49.1716 7.53554L52.3536 4.35356ZM-3.11023e-08 4.5L52 4.5L52 3.5L3.11023e-08 3.5L-3.11023e-08 4.5Z"
+                        fill="currentColor"></path>
                   </svg>
                </span>Get in touch
             </a>
@@ -192,21 +261,20 @@
          <h3 class="tp-footer__widget-title">Info</h3>
          <ul>
             <li><a href="#">202, Second Floor, Building-30C, Street-2, Jami
-Commercial, Phase-VII Ext., DHA, Karachi.</a></li>
-                                 <li>
-                                    <a href="tel:+92-345-3164013">+92-345-3164013</a> 
-                                    
-                                 </li>
-                                 <li><a href="mailto:alviconsulting.ace@gmail.com">alviconsulting.ace@gmail.com</a></li>
+                  Commercial, Phase-VII Ext., DHA, Karachi.</a></li>
+            <li>
+               <a href="tel:+92-345-3164013">+92-345-3164013</a>
+
+            </li>
+            <li><a href="mailto:alviconsulting.ace@gmail.com">alviconsulting.ace@gmail.com</a></li>
          </ul>
       </div>
    </div>
    <div class="body-overlay"></div>
    <!-- header area end -->
 
-   
-   <section class="breadcrumb__area include-bg breadcrumb__overlay"
-      data-background="assets/img/breadcrumb/breadcrumb-bg-2.jpg">
+
+   <section class="breadcrumb__area include-bg breadcrumb__overlay" data-background="assets/img/bg/contact.jpg">
       <div class="container">
          <div class="row">
             <div class="col-xxl-12">
@@ -263,7 +331,7 @@ Commercial, Phase-VII Ext., DHA, Karachi.</a></li>
                      </h3>
                      <p class="p-0">
                         <a href="tel:+92-345-3164013">+92-345-3164013</a> <br>
-                        
+
                      </p>
 
                   </div>
@@ -289,14 +357,14 @@ Commercial, Phase-VII Ext., DHA, Karachi.</a></li>
             <div class="row">
                <div class="col-12">
                   <div class="tp-ct-form white-bg pl-110 pr-110 pt-80 pb-130">
-                     <form id="contact-form" action="https://weblearnbd.net/tphtml/arvilax/arvilax/assets/mail.php" method="POST">
+                     <form method="POST">
                         <input type="text" name="name" placeholder="Enter your name*" required>
                         <input type="email" name="email" placeholder="Your email here" required>
                         <input type="text" name="phone" placeholder="Enter your number*" required>
                         <input type="text" name="subject" placeholder="Subject*" required>
-                        <textarea name="message"  placeholder="Enter your Massage*"></textarea>
+                        <textarea name="message" placeholder="Enter your Massage*"></textarea>
                         <div class="text-center">
-                           <button type="submit" class="tp-btn-border">Send Massage <span>
+                           <button type="submit" name="send"  class="tp-btn-border">Send Massage <span>
                                  <svg width="22" height="8" viewBox="0 0 22 8" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path
@@ -319,8 +387,7 @@ Commercial, Phase-VII Ext., DHA, Karachi.</a></li>
             </div>
          </div>
          <div class="tp-ct-map">
-            <iframe
-               src="https://maps.google.com/maps?q=alvi consulting&t=m&z=16&output=embed&iwloc=near"
+            <iframe src="https://maps.google.com/maps?q=alvi consulting&t=m&z=16&output=embed&iwloc=near"
                style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
          </div>
       </div>
@@ -340,11 +407,11 @@ Commercial, Phase-VII Ext., DHA, Karachi.</a></li>
             <div class="tp-footer__top pt-90 pb-60">
                <div class="container">
                   <div class="row align-items-center">
-                     <div class="col-lg-5">
+                     <div class="col-lg-12 text-center">
                         <h3 class="tp-footer__top-title">Have a project in mind?
                            Let’s work together.</h3>
                      </div>
-                     <div class="col-lg-7">
+                     <!-- <div class="col-lg-7">
                         <div class="tp-insta d-flex justify-content-lg-end">
                            <div class="tp-insta__item p-relative ml-20">
                               <img src="assets/img/footer/footer-sm-1.jpg" alt="">
@@ -363,7 +430,7 @@ Commercial, Phase-VII Ext., DHA, Karachi.</a></li>
                               <a href="#"><i class="fab fa-instagram"></i></a>
                            </div>
                         </div>
-                     </div>
+                     </div> -->
                   </div>
                </div>
             </div>
@@ -417,7 +484,7 @@ Commercial, Phase-VII Ext., DHA, Karachi.</a></li>
                                     <ul>
                                        <li><a href="project.html">Projects</a></li>
                                        <li><a href="gallery.html">Gallery</a></li>
-<li><a href="team.html">Our Team</a></li>
+                                       <li><a href="team.html">Our Team</a></li>
                                        <li><a href="contact.html">Contact Us</a></li>
                                     </ul>
                                  </div>
@@ -429,10 +496,10 @@ Commercial, Phase-VII Ext., DHA, Karachi.</a></li>
                               <h3 class="tp-footer__widget-title">Info</h3>
                               <ul>
                                  <li><a href="#">202, Second Floor, Building-30C, Street-2, Jami
-                                    Commercial, Phase-VII Ext., DHA, Karachi.</a></li>
+                                       Commercial, Phase-VII Ext., DHA, Karachi.</a></li>
                                  <li>
                                     <a href="tel:+92-345-3164013">+92-345-3164013</a>
-                                    
+
                                  </li>
                                  <li><a href="mailto:alviconsulting.ace@gmail.com">alviconsulting.ace@gmail.com</a></li>
                               </ul>
@@ -496,4 +563,5 @@ Commercial, Phase-VII Ext., DHA, Karachi.</a></li>
 
 
 <!-- Mirrored from weblearnbd.net/tphtml/arvilax/arvilax/contact.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 03 Jun 2023 21:03:32 GMT -->
+
 </html>

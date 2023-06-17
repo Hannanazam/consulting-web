@@ -3,6 +3,7 @@
 
 
 <!-- Mirrored from weblearnbd.net/tphtml/arvilax/arvilax/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 03 Jun 2023 20:59:53 GMT -->
+
 <head>
    <meta charset="utf-8">
    <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -27,6 +28,41 @@
    <link rel="stylesheet" href="assets/css/spacing.css">
    <link rel="stylesheet" href="assets/css/style.css">
 </head>
+
+<style>
+   .choose-box {
+    padding: 40px 40px 10px 40px;
+    position: relative;
+    z-index: 1;
+    background: #fff;
+    transition: all .3s ease;
+    box-shadow: 0px 0px 9px 0px #c3c3c3;
+    border-radius: 20px;
+    background: #a67c52;
+    color: #fff;
+    cursor: pointer;
+    height: 400px;
+}
+.icon_main i {
+    background-color: #fff;
+    color: #a67c52;
+}
+.choose-box:hover .tp-blog__meta,
+.choose-box:hover .tp-blog__title {
+   color: #000;
+}
+.choose-box:hover .icon_main i {
+   background: #a67c52;
+   color: #fff;
+}
+.choose-box:hover {
+   background: #fff;
+}
+.tp-blog__meta,
+.tp-blog__title {
+    color: #fff;
+}
+</style>
 
 <body>
    <!--[if lte IE 9]>
@@ -91,7 +127,7 @@
                               <li>
                                  <a href="gallery.html">Gallery</a>
                               </li>
-<li>
+                              <li>
                                  <a href="team.html">Our Team</a>
                               </li>
                               <li>
@@ -134,16 +170,17 @@
                      <div class="header__main_right d-flex justify-content-end align-items-center">
                         <div class="tp-header-search-icons normal-search mr-80 p-relative">
                            <div class="search-btn-wrap">
-                             <button class="button-search-toggle position-relative">
+                              <button class="button-search-toggle position-relative">
                                  <i class="header_search-button text-white far fa-search"></i>
                                  <i class="header_search-close text-white far fa-times"></i>
-                             </button>
-                             <div class="tp-search-form p-relative">
+                              </button>
+                              <div class="tp-search-form p-relative">
                                  <form action="#">
                                     <input type="text" placeholder="Search ...">
-                                    <button type="submit" class="search-submit-icon"><i class="far fa-search"></i></button>
-                               </form>
-                             </div>
+                                    <button type="submit" class="search-submit-icon"><i
+                                          class="far fa-search"></i></button>
+                                 </form>
+                              </div>
                            </div>
                         </div>
                         <div class="tp-bar-icon">
@@ -170,16 +207,21 @@
             <img src="assets/img/logo/logo.png" alt="">
          </div>
          <div class="offcanva-details">
-            <p>Our Firm was set up in 2014 with the point of giving specific consultancy and administrative administrations in the field of Civil Engineering.</p>
+            <p>Our Firm was set up in 2014 with the point of giving specific consultancy and administrative
+               administrations in the field of Civil Engineering.</p>
          </div>
          <div class="offcanva-btn">
             <a href="contact.html" class="tp-slider-btn   mt-40 d-inline-block" tabindex="-1">
                <span>
                   <svg width="53" height="8" viewBox="0 0 53 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                     <path d="M52.3536 4.35356C52.5488 4.15829 52.5488 3.84171 52.3536 3.64645L49.1716 0.464469C48.9763 0.269207 48.6597 0.269207 48.4645 0.464469C48.2692 0.659731 48.2692 0.976314 48.4645 1.17158L51.2929 4L48.4645 6.82843C48.2692 7.02369 48.2692 7.34027 48.4645 7.53554C48.6597 7.7308 48.9763 7.7308 49.1716 7.53554L52.3536 4.35356ZM-3.11023e-08 4.5L52 4.5L52 3.5L3.11023e-08 3.5L-3.11023e-08 4.5Z" fill="currentColor"></path>
+                     <path
+                        d="M52.3536 4.35356C52.5488 4.15829 52.5488 3.84171 52.3536 3.64645L49.1716 0.464469C48.9763 0.269207 48.6597 0.269207 48.4645 0.464469C48.2692 0.659731 48.2692 0.976314 48.4645 1.17158L51.2929 4L48.4645 6.82843C48.2692 7.02369 48.2692 7.34027 48.4645 7.53554C48.6597 7.7308 48.9763 7.7308 49.1716 7.53554L52.3536 4.35356ZM-3.11023e-08 4.5L52 4.5L52 3.5L3.11023e-08 3.5L-3.11023e-08 4.5Z"
+                        fill="currentColor"></path>
                   </svg>
                   <svg width="53" height="8" viewBox="0 0 53 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                     <path d="M52.3536 4.35356C52.5488 4.15829 52.5488 3.84171 52.3536 3.64645L49.1716 0.464469C48.9763 0.269207 48.6597 0.269207 48.4645 0.464469C48.2692 0.659731 48.2692 0.976314 48.4645 1.17158L51.2929 4L48.4645 6.82843C48.2692 7.02369 48.2692 7.34027 48.4645 7.53554C48.6597 7.7308 48.9763 7.7308 49.1716 7.53554L52.3536 4.35356ZM-3.11023e-08 4.5L52 4.5L52 3.5L3.11023e-08 3.5L-3.11023e-08 4.5Z" fill="currentColor"></path>
+                     <path
+                        d="M52.3536 4.35356C52.5488 4.15829 52.5488 3.84171 52.3536 3.64645L49.1716 0.464469C48.9763 0.269207 48.6597 0.269207 48.4645 0.464469C48.2692 0.659731 48.2692 0.976314 48.4645 1.17158L51.2929 4L48.4645 6.82843C48.2692 7.02369 48.2692 7.34027 48.4645 7.53554C48.6597 7.7308 48.9763 7.7308 49.1716 7.53554L52.3536 4.35356ZM-3.11023e-08 4.5L52 4.5L52 3.5L3.11023e-08 3.5L-3.11023e-08 4.5Z"
+                        fill="currentColor"></path>
                   </svg>
                </span>Get in touch
             </a>
@@ -190,12 +232,12 @@
          <h3 class="tp-footer__widget-title">Info</h3>
          <ul>
             <li><a href="#">202, Second Floor, Building-30C, Street-2, Jami
-Commercial, Phase-VII Ext., DHA, Karachi.</a></li>
-                                 <li>
-                                    <a href="tel:+92-345-3164013">+92-345-3164013</a> 
-                                    
-                                 </li>
-                                 <li><a href="mailto:alviconsulting.ace@gmail.com">alviconsulting.ace@gmail.com</a></li>
+                  Commercial, Phase-VII Ext., DHA, Karachi.</a></li>
+            <li>
+               <a href="tel:+92-345-3164013">+92-345-3164013</a>
+
+            </li>
+            <li><a href="mailto:alviconsulting.ace@gmail.com">alviconsulting.ace@gmail.com</a></li>
          </ul>
       </div>
    </div>
@@ -204,15 +246,15 @@ Commercial, Phase-VII Ext., DHA, Karachi.</a></li>
 
 
    <main>
-      
+
       <!-- hero slider start -->
       <div class="tp-slider-area p-relative">
          <div class="tp-hero_slider slider-active p-relative">
-            <div class="tp-single-slider tp-slider-height p-relative" data-background="assets/img/bg/hero-bg-1.2.jpg">
+            <div class="tp-single-slider tp-slider-height p-relative" data-background="assets/img/bg/slider1.jpg">
                <div class="tp-slider-text black-bg d-inline-block">
                   <!-- <span class="mb-15 d-inline-block">Make your new business plan a success!</span> -->
-                  <h3 class="tp-slider-title">DESIGN, ESTIMATION  <br> AND SUPERVISION</h3>
-   
+                  <h3 class="tp-slider-title">DESIGN, ESTIMATION <br> AND SUPERVISION</h3>
+
                   <a href="#" class="tp-slider-btn mt-40 d-inline-block">
                      <span>
                         <svg width="53" height="8" viewBox="0 0 53 8" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -227,14 +269,14 @@ Commercial, Phase-VII Ext., DHA, Karachi.</a></li>
                         </svg>
                      </span>Get in touch
                   </a>
-   
+
                </div>
             </div>
-            <div class="tp-single-slider tp-slider-height p-relative" data-background="assets/img/bg/hero-bg.jpg">
+            <div class="tp-single-slider tp-slider-height p-relative" data-background="assets/img/bg/slider2.jpg">
                <div class="tp-slider-text black-bg d-inline-block">
                   <!-- <span class="mb-15 d-inline-block">Make your new business plan a success!</span>
                   <h3 class="tp-slider-title">Make your <br> Business Doom</h3> -->
-                  <h3 class="tp-slider-title">DESIGN, ESTIMATION  <br> AND SUPERVISION</h3>
+                  <h3 class="tp-slider-title">DESIGN, ESTIMATION <br> AND SUPERVISION</h3>
 
                   <a href="#" class="tp-slider-btn   mt-40 d-inline-block">
                      <span>
@@ -252,11 +294,11 @@ Commercial, Phase-VII Ext., DHA, Karachi.</a></li>
                   </a>
                </div>
             </div>
-            <div class="tp-single-slider tp-slider-height p-relative" data-background="assets/img/bg/hero-bg-1.jpg">
+            <div class="tp-single-slider tp-slider-height p-relative" data-background="assets/img/bg/slider3.jpg">
                <div class="tp-slider-text black-bg d-inline-block">
                   <!-- <span class="mb-15 d-inline-block">Make your new business plan a success!</span>
                   <h3 class="tp-slider-title">Make your <br> Business Doom</h3> -->
-                  <h3 class="tp-slider-title">DESIGN, ESTIMATION  <br> AND SUPERVISION</h3>
+                  <h3 class="tp-slider-title">DESIGN, ESTIMATION <br> AND SUPERVISION</h3>
 
                   <a href="#" class="tp-slider-btn mt-40 d-inline-block">
                      <span>
@@ -278,8 +320,8 @@ Commercial, Phase-VII Ext., DHA, Karachi.</a></li>
          <div class="slider-arrow"></div>
       </div>
       <!-- hero slider end  -->
-      
-      
+
+
       <!-- lasted blog start  -->
       <div class="tp-lasted-blog pt-140">
          <div class="container">
@@ -295,11 +337,14 @@ Commercial, Phase-VII Ext., DHA, Karachi.</a></li>
                <div class="col-lg-4 col-md-6">
                   <div class="tp-blog choose-box">
                      <div class="tp-blog__thumb icon_main">
-                        <i class="fas fa-university pagelayer-icon-circle pagelayer-animation-grow" aria-hidden="true"></i>
+                        <i class="fas fa-university pagelayer-icon-circle pagelayer-animation-grow"
+                           aria-hidden="true"></i>
                      </div>
                      <h3 class="tp-blog__title mb-2">Design & Consultation Services</h3>
                      <div class="tp-blog__meta pb-15">
-                        <span>ACE offers design support on the areas of civil and structural,. We also have the capacity to offer Design for Safety and BIM services to create projects that are safe and innovative.</span>
+                        <span>ACE offers design support on the areas of civil and structural,. We also have the capacity
+                           to offer Design for Safety and BIM services to create projects that are safe and
+                           innovative.</span>
                      </div>
                   </div>
                </div>
@@ -310,7 +355,9 @@ Commercial, Phase-VII Ext., DHA, Karachi.</a></li>
                      </div>
                      <h3 class="tp-blog__title mb-2">Vetting and Assessment</h3>
                      <div class="tp-blog__meta pb-15">
-                        <span>ACE's structural engineers are well-versed in vetting and assessment of design. Our services are crucial to determining the condition of the building structure and its components, as well as ensuring public safety
+                        <span>ACE's structural engineers are well-versed in vetting and assessment of design. Our
+                           services are crucial to determining the condition of the building structure and its
+                           components, as well as ensuring public safety
                         </span>
                      </div>
                   </div>
@@ -318,22 +365,27 @@ Commercial, Phase-VII Ext., DHA, Karachi.</a></li>
                <div class="col-lg-4 col-md-6">
                   <div class="tp-blog choose-box">
                      <div class="tp-blog__thumb icon_main">
-                        <i class="fas fa-calculator pagelayer-icon-circle pagelayer-animation-grow" aria-hidden="true"></i>
+                        <i class="fas fa-calculator pagelayer-icon-circle pagelayer-animation-grow"
+                           aria-hidden="true"></i>
                      </div>
                      <h3 class="tp-blog__title mb-2">Quantities & Estimation</h3>
                      <div class="tp-blog__meta pb-15">
-                        <span>Our team is expert in preparing estimates and we can deliver the quantity takeoffs very fast so that you don't miss the deadline.</span>
+                        <span>Our team is expert in preparing estimates and we can deliver the quantity takeoffs very
+                           fast so that you don't miss the deadline.</span>
                      </div>
                   </div>
                </div>
                <div class="col-lg-4 col-md-6">
                   <div class="tp-blog choose-box">
                      <div class="tp-blog__thumb icon_main">
-                        <i class="fas fa-street-view pagelayer-icon-circle pagelayer-animation-grow" aria-hidden="true"></i>
+                        <i class="fas fa-street-view pagelayer-icon-circle pagelayer-animation-grow"
+                           aria-hidden="true"></i>
                      </div>
                      <h3 class="tp-blog__title mb-2">Top Supervision</h3>
                      <div class="tp-blog__meta pb-15">
-                        <span>The Supervision Consultancy Team provides quality management services via monitoring and evaluating work executed on site by the Contractors and taking necessary actions to make sure the right adherence to and implementation of the design documents</span>
+                        <span>The Supervision Consultancy Team provides quality management services via monitoring and
+                           evaluating work executed on site by the Contractors and taking necessary actions to make sure
+                           the right adherence to and implementation of the design documents</span>
                      </div>
                   </div>
                </div>
@@ -341,11 +393,13 @@ Commercial, Phase-VII Ext., DHA, Karachi.</a></li>
                <div class="col-lg-4 col-md-6">
                   <div class="tp-blog choose-box">
                      <div class="tp-blog__thumb icon_main">
-                        <i class="fas fa-building pagelayer-icon-circle pagelayer-animation-grow" aria-hidden="true"></i>
+                        <i class="fas fa-building pagelayer-icon-circle pagelayer-animation-grow"
+                           aria-hidden="true"></i>
                      </div>
                      <h3 class="tp-blog__title mb-2">3D Modelling</h3>
                      <div class="tp-blog__meta pb-15">
-                        <span>We offer structural 3D modelling services that enable structure visualization, preview building structures or prototype, and expand the viewer’s imaginative capabilities.</span>
+                        <span>We offer structural 3D modelling services that enable structure visualization, preview
+                           building structures or prototype, and expand the viewer’s imaginative capabilities.</span>
                      </div>
                   </div>
                </div>
@@ -378,7 +432,8 @@ Commercial, Phase-VII Ext., DHA, Karachi.</a></li>
                         <h2 class="tp-section-title pt-25 mb-30">We’re ready to work with you</h2>
                         <p>What structural problem can we solve for you?</p>
                         <p class="pt-10">
-                           Is it accurate to say that you are prepared to begin teaming up with engineers you can trust? Contact ACE today
+                           Is it accurate to say that you are prepared to begin teaming up with engineers you can trust?
+                           Contact ACE today
                         </p>
                      </div>
                      <div class="mt-45 mb-30">
@@ -755,50 +810,50 @@ Commercial, Phase-VII Ext., DHA, Karachi.</a></li>
             <div class="row">
                <div class="col-12">
                   <div class="tp-section-wrapper text-center">
-                     <h2 class="tp-section-title mb-50">OUR  RECENT PROJECTS</h2>
+                     <h2 class="tp-section-title mb-50">OUR RECENT PROJECTS</h2>
                      <!-- <span class="tp-section-subtitle mb-30">We enhance our ventures by listening cautiously to our customers to guarantee that we line up with their targets and the necessities of building inhabitants, as well as conveying structures that are protected, manageable and financially savvy. From the soonest configuration stages, we plan for the assorted employments of an undertaking through for what seems like forever cycle, zeroing in on productivity and economy. We try to convey adaptable arrangements ready to adjust to future necessities, while upgrading the structure construction to boost property estimation.</span> -->
                   </div>
                </div>
             </div>
-             <div class="row">
-                 <div class="col-lg-4 col-md-6 col-12">
-                     <div class="pj-list-item mb-50">
-                         <div class="pj-list__img">
-                             <img src="assets/img/project/afzal-residence.jpg" alt="">
-                         </div>
-                         <span><a href="#">Dec 2016</a></span>
-                         <h4 class="pj-list__title">
-                            <a href="#">Monument Architecture</a>
-                         </h4>
-                     </div>
-                 </div>
-                 <div class="col-lg-4 col-md-6 col-12">
+            <div class="row">
+               <div class="col-lg-4 col-md-6 col-12">
                   <div class="pj-list-item mb-50">
-                      <div class="pj-list__img">
-                          <img src="assets/img/project/MAK-Residence.jpg" alt="">
-                      </div>
-                      <span><a href="#">Dec 2016</a></span>
-                      <h4 class="pj-list__title">
-                         <a href="#">Monument Architecture</a>
-                      </h4>
+                     <div class="pj-list__img">
+                        <img src="assets/img/project/afzal-residence.jpg" alt="">
+                     </div>
+                     <!-- <span><a href="#">Dec 2016</a></span>
+                     <h4 class="pj-list__title">
+                        <a href="#">Monument Architecture</a>
+                     </h4> -->
                   </div>
-              </div>
-              <div class="col-lg-4 col-md-6 col-12">
-               <div class="pj-list-item mb-50">
-                   <div class="pj-list__img">
-                       <img src="assets/img/project/residency.jpg" alt="">
-                   </div>
-                   <span><a href="#">Dec 2016</a></span>
-                   <h4 class="pj-list__title">
-                      <a href="#">Monument Architecture</a>
-                   </h4>
                </div>
-           </div>
-                 
-             </div>
+               <div class="col-lg-4 col-md-6 col-12">
+                  <div class="pj-list-item mb-50">
+                     <div class="pj-list__img">
+                        <img src="assets/img/project/MAK-Residence.jpg" alt="">
+                     </div>
+                     <!-- <span><a href="#">Dec 2016</a></span>
+                     <h4 class="pj-list__title">
+                        <a href="#">Monument Architecture</a>
+                     </h4> -->
+                  </div>
+               </div>
+               <div class="col-lg-4 col-md-6 col-12">
+                  <div class="pj-list-item mb-50">
+                     <div class="pj-list__img">
+                        <img src="assets/img/project/residency.jpg" alt="">
+                     </div>
+                     <!-- <span><a href="#">Dec 2016</a></span>
+                     <h4 class="pj-list__title">
+                        <a href="#">Monument Architecture</a>
+                     </h4> -->
+                  </div>
+               </div>
+
+            </div>
          </div>
 
-     </div>
+      </div>
 
       <!-- Our Project end -->
 
@@ -849,11 +904,11 @@ Commercial, Phase-VII Ext., DHA, Karachi.</a></li>
             <div class="tp-footer__top pt-90 pb-60">
                <div class="container">
                   <div class="row align-items-center">
-                     <div class="col-lg-5">
+                     <div class="col-lg-12 text-center">
                         <h3 class="tp-footer__top-title">Have a project in mind?
                            Let’s work together.</h3>
                      </div>
-                     <div class="col-lg-7">
+                     <!-- <div class="col-lg-7">
                         <div class="tp-insta d-flex justify-content-lg-end">
                            <div class="tp-insta__item p-relative ml-20">
                               <img src="assets/img/footer/footer-sm-1.jpg" alt="">
@@ -872,7 +927,7 @@ Commercial, Phase-VII Ext., DHA, Karachi.</a></li>
                               <a href="#"><i class="fab fa-instagram"></i></a>
                            </div>
                         </div>
-                     </div>
+                     </div> -->
                   </div>
                </div>
             </div>
@@ -887,7 +942,15 @@ Commercial, Phase-VII Ext., DHA, Karachi.</a></li>
                            <div class="tp-footer__widget  pb-30">
                               <h3 class="tp-footer__widget-title">About Us</h3>
                               <ul>
-                                 <li class="text-white text-justify">Our Firm was set up in 2014 with the point of giving specific consultancy and administrative administrations in the field of Civil Engineering. The organization started its excursion with a little gathering of individuals and is presently one of the legitimate establishments in the field, offering structured solutions to various architects and contractors. This association is controlled mainly by two Structural Engineers who collectively have around 25 years of diversified experience in the design and construction industry. An alliance of Engineer Fozia Naseem and Engineer Muhammad Rafeeque Ahmed Alvi holds the ground for ACE.</li>
+                                 <li class="text-white text-justify">Our Firm was set up in 2014 with the point of
+                                    giving specific consultancy and administrative administrations in the field of Civil
+                                    Engineering. The organization started its excursion with a little gathering of
+                                    individuals and is presently one of the legitimate establishments in the field,
+                                    offering structured solutions to various architects and contractors. This
+                                    association is controlled mainly by two Structural Engineers who collectively have
+                                    around 25 years of diversified experience in the design and construction industry.
+                                    An alliance of Engineer Fozia Naseem and Engineer Muhammad Rafeeque Ahmed Alvi holds
+                                    the ground for ACE.</li>
                               </ul>
                            </div>
                         </div>
@@ -906,22 +969,22 @@ Commercial, Phase-VII Ext., DHA, Karachi.</a></li>
                            <div class="tp-footer__widget  pb-30">
                               <h3 class="tp-footer__widget-title">Quick Links</h3>
                               <div class="row">
-                              <div class="col-6 ">
-                                 <ul>
-                                    <li><a href="index.html">Home</a></li>
-                                    <li><a href="about.html">About Us</a></li>
-                                    <li><a href="client.html">Out Client</a></li>
-                                    <li><a href="associates.html">Out Associates</a></li>
-                                 </ul>
-                              </div>
-                              <div class="col-6">
-                                 <ul>
-                                    <li><a href="project.html">Projects</a></li>
-                                    <li><a href="gallery.html">Gallery</a></li>
-<li><a href="team.html">Our Team</a></li>
-                                    <li><a href="contact.html">Contact Us</a></li>
-                                 </ul>
-                              </div>
+                                 <div class="col-6 ">
+                                    <ul>
+                                       <li><a href="index.html">Home</a></li>
+                                       <li><a href="about.html">About Us</a></li>
+                                       <li><a href="client.html">Out Client</a></li>
+                                       <li><a href="associates.html">Out Associates</a></li>
+                                    </ul>
+                                 </div>
+                                 <div class="col-6">
+                                    <ul>
+                                       <li><a href="project.html">Projects</a></li>
+                                       <li><a href="gallery.html">Gallery</a></li>
+                                       <li><a href="team.html">Our Team</a></li>
+                                       <li><a href="contact.html">Contact Us</a></li>
+                                    </ul>
+                                 </div>
                               </div>
                            </div>
                         </div>
@@ -930,10 +993,10 @@ Commercial, Phase-VII Ext., DHA, Karachi.</a></li>
                               <h3 class="tp-footer__widget-title">Info</h3>
                               <ul>
                                  <li><a href="#">202, Second Floor, Building-30C, Street-2, Jami
-Commercial, Phase-VII Ext., DHA, Karachi.</a></li>
+                                       Commercial, Phase-VII Ext., DHA, Karachi.</a></li>
                                  <li>
-                                    <a href="tel:+92-345-3164013">+92-345-3164013</a> 
-                                    
+                                    <a href="tel:+92-345-3164013">+92-345-3164013</a>
+
                                  </li>
                                  <li><a href="mailto:alviconsulting.ace@gmail.com">alviconsulting.ace@gmail.com</a></li>
                               </ul>
@@ -996,4 +1059,5 @@ Commercial, Phase-VII Ext., DHA, Karachi.</a></li>
 
 
 <!-- Mirrored from weblearnbd.net/tphtml/arvilax/arvilax/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 03 Jun 2023 21:01:19 GMT -->
+
 </html>
